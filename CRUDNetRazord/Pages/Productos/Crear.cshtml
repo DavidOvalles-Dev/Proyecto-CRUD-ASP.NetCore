@@ -1,0 +1,79 @@
+﻿@page
+@model CRUDNetRazord.Pages.Productos.CrearModel
+@{
+    ViewData["Title"] = "Lista de productos";
+}
+
+<div class="card">
+    <div class="card-header bg-dark">
+               <h2 class="text-info">Crear un nuevo producto</h2>
+    </div>
+
+    <div class="card text-light bg-dark">
+        <form method="POST">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="container" style="padding:30px">
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <label asp-for="Producto.NombreProducto"></label>
+                        </div>
+                        <div class="col-sm-6">
+                            <input asp-for="Producto.NombreProducto" class="form-control bg-dark text-light"/>
+                        </div>
+                        <span asp-validation-for="Producto.NombreProducto" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <label asp-for="Producto.Descripcion"></label>
+                        </div>
+                        <div class="col-sm-6">
+                            <input asp-for="Producto.Descripcion" class="form-control bg-dark text-light" />
+                        </div>
+                        <span asp-validation-for="Producto.Descripcion" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <label asp-for="Producto.BnStock"></label>
+                        </div>
+                        <div class="col-sm-6">
+                            <input asp-for="Producto.BnStock" class="form-control bg-dark text-light" />
+                        </div>
+                        <span asp-validation-for="Producto.BnStock" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <label asp-for="Producto.Precio"></label>
+                        </div>
+                        <div class="col-sm-6">
+                            <input asp-for="Producto.Precio" class="form-control bg-dark text-light" />
+                        </div>
+                        <span asp-validation-for="Producto.Precio" class="text-danger"></span>
+                    </div>
+                </div>
+
+
+                <div class="form-group mt-4">
+                    <div class="row">
+                        <div class="col-sm-3 offset-sm-2">
+                            <input type="submit" value="Crear" class="btn btn-primary form-control" />
+                        </div>
+                        <div class="col-sm-4">
+                            <a asp-page="Index" class="btn btn-success form-control">Volver a lista</a>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </form>
+    </div>
